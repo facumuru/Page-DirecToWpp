@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Magic</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #d4af37, #8b6508);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Logo */
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            margin-top: -30px;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Título con efecto de luz intermitente */
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffd700;
+            display: inline-block;
+            animation: flicker 1s infinite alternate;
+        }
+
+        /* Efecto de parpadeo en el título */
+        @keyframes flicker {
+            0%, 100% {
+                color: #ffd700; /* Dorado */
+                text-shadow:
+                    0 0 5px #ffd700,
+                    0 0 10px #ff9900,
+                    0 0 15px #ff3300;
+            }
+            50% {
+                color: #ffffff; /* Blanco brillante */
+                text-shadow:
+                    0 0 5px #ffffff,
+                    0 0 10px #ff9900,
+                    0 0 15px #ff3300,
+                    0 0 20px #ff3300,
+                    0 0 30px #ff0000;
+            }
+        }
+
+        /* Botón principal */
+        .button {
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .button:hover {
+            background-color: #333;
+        }
+
+        /* Texto de contacto */
+        .contact-text {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Flechas estilo neón */
+        .neon-arrow {
+            position: absolute;
+            color: #ffd700;
+            font-size: 70px;
+            animation: flicker 1s infinite alternate;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .neon-arrow.left {
+            left: -120px;
+            top: 30%;
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        .neon-arrow.right {
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="Logo.jpeg" alt="Golden Magic Logo">
+    </div>
+
+    <!-- Título de bienvenida con efecto de luz intermitente -->
+    <div class="title">¡APROVECHA NUESTRO BONO DE BIENVENIDA DEL 200%!</div>
+
+    <!-- Botón para crear cuenta con icono de WhatsApp -->
+    <div style="position: relative;">
+        <span class="neon-arrow left" onclick="document.querySelector('.button').click();">➡</span>
+        <a href="https://wa.link/iqwswc" class="button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"> CREA TU CUENTA GRATIS
+        </a>
+        <span class="neon-arrow right" onclick="document.querySelector('.button').click();">➡</span>
+    </div>
+
+    <!-- Texto de contacto -->
+    <div class="contact-text">¡MANDANOS UN WHATSAPP Y TRIPLICA TU CARGA!</div>
+</body>
+</html>
